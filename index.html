@@ -155,15 +155,15 @@
       </div>
       <div class="step">
         <div class="step-num">2</div>
-        <div class="step-text">Tap <strong>Install Script</strong> below — it opens Scriptable and installs automatically.</div>
+        <div class="step-text">Tap <strong>Copy Script</strong> below.</div>
       </div>
       <div class="step">
         <div class="step-num">3</div>
-        <div class="step-text">Run the script. It checks your contacts against the District 5 voter list.</div>
+        <div class="step-text">Open Scriptable, tap <strong>+</strong>, paste, tap <strong>Done</strong>, then tap the play button.</div>
       </div>
       <div class="step">
         <div class="step-num">4</div>
-        <div class="step-text">Tap any name to open a pre-written text message — just hit send!</div>
+        <div class="step-text">Tap any matching friend to send them a pre-written text!</div>
       </div>
     </div>
 
@@ -171,9 +171,32 @@
       📲 Get Scriptable (Free)
     </a>
 
-    <button class="btn btn-primary" onclick="window.location.href='scriptable:///import?url=' + encodeURIComponent('https://laneseabolt.github.io/topple-campaign/district5friendsfinder.js')">
-      Install Script
+    <button class="btn btn-primary" id="copyBtn" onclick="copyScript()">
+      Copy Script to Clipboard
     </button>
+
+    <p id="copyMsg" style="display:none; color:#2b6cb0; font-weight:600; margin-top:8px; font-size:15px;">
+      Copied! Now open Scriptable → tap + → paste → Done → run.
+    </p>
+
+    <script>
+      async function copyScript() {
+        const btn = document.getElementById('copyBtn');
+        btn.textContent = 'Loading...';
+        btn.disabled = true;
+        try {
+          const res = await fetch('district5friendsfinder.js');
+          const code = await res.text();
+          await navigator.clipboard.writeText(code);
+          btn.textContent = 'Copied!';
+          document.getElementById('copyMsg').style.display = 'block';
+        } catch(e) {
+          btn.textContent = 'Copy Script to Clipboard';
+          btn.disabled = false;
+          alert('Could not copy. Please make sure you are using Safari.');
+        }
+      }
+    </script>
 
     <hr class="divider">
 
