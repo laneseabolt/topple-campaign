@@ -175,9 +175,14 @@
       Copy Script to Clipboard
     </button>
 
-    <p id="copyMsg" style="display:none; color:#2b6cb0; font-weight:600; margin-top:8px; font-size:15px;">
-      Copied! Now open Scriptable → tap + → paste → Done → run.
-    </p>
+    <div id="copyMsg" style="display:none;">
+      <p style="color:#2b6cb0; font-weight:600; margin-top:8px; margin-bottom:12px; font-size:15px;">
+        Copied! Now open Scriptable, tap +, paste, tap Done, then run.
+      </p>
+      <a class="btn btn-secondary" href="scriptable://">
+        Open Scriptable
+      </a>
+    </div>
 
     <textarea id="scriptContent" readonly style="position:absolute;left:-9999px;top:-9999px;opacity:0;">// ================================================
 // District Friends Finder
