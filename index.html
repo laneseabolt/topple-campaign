@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>District Friends Finder – Craig Topple for District 5</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #f0f4f8;
+      color: #1a202c;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px 16px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 20px;
+      padding: 36px 28px;
+      max-width: 420px;
+      width: 100%;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+      text-align: center;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #2b6cb0;
+      color: white;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 99px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 26px;
+      font-weight: 700;
+      line-height: 1.25;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      font-size: 16px;
+      color: #4a5568;
+      margin-bottom: 32px;
+      line-height: 1.5;
+    }
+
+    .steps {
+      text-align: left;
+      background: #f7fafc;
+      border-radius: 14px;
+      padding: 20px 22px;
+      margin-bottom: 28px;
+    }
+
+    .steps h2 {
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #718096;
+      margin-bottom: 14px;
+    }
+
+    .step {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .step:last-child { margin-bottom: 0; }
+
+    .step-num {
+      background: #2b6cb0;
+      color: white;
+      font-size: 13px;
+      font-weight: 700;
+      border-radius: 50%;
+      min-width: 26px;
+      height: 26px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1px;
+    }
+
+    .step-text {
+      font-size: 15px;
+      line-height: 1.5;
+      color: #2d3748;
+    }
+
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 17px 20px;
+      border-radius: 14px;
+      font-size: 17px;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      margin-bottom: 12px;
+      transition: opacity 0.15s;
+    }
+
+    .btn:active { opacity: 0.82; }
+
+    .btn-primary {
+      background: #2b6cb0;
+      color: white;
+    }
+
+    .btn-secondary {
+      background: #ebf4ff;
+      color: #2b6cb0;
+    }
+
+    .note {
+      font-size: 13px;
+      color: #a0aec0;
+      margin-top: 18px;
+      line-height: 1.5;
+    }
+
+    .divider {
+      border: none;
+      border-top: 1px solid #e2e8f0;
+      margin: 24px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="badge">Craig Topple for District 5</div>
+    <h1>District Friends Finder</h1>
+    <p class="subtitle">Find out which of your friends live in District 5 — then text them in seconds.</p>
+
+    <div class="steps">
+      <h2>How it works</h2>
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-text">Download the free <strong>Scriptable</strong> app from the App Store.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-text">Tap <strong>Install Script</strong> below — it opens Scriptable and installs automatically.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-text">Run the script. It checks your contacts against the District 5 voter list.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-text">Tap any name to open a pre-written text message — just hit send!</div>
+      </div>
+    </div>
+
+    <a class="btn btn-secondary" href="https://apps.apple.com/us/app/scriptable/id1405459188">
+      📲 Get Scriptable (Free)
+    </a>
+
+    <a class="btn btn-primary" href="scriptable:///import?url=https%3A%2F%2Fgist.githubusercontent.com%2Flaneseabolt%2Fc726a2475784c416b1b98a44e02310b8%2Fraw%2F06e6fd799bec712d1c0487e9ca053e35a14363af%2Fdistrict5friendsfinder.js">
+      Install Script
+    </a>
+
+    <hr class="divider">
+
+    <p class="note">Your contacts never leave your phone. The script only checks phone numbers — nothing is uploaded or stored anywhere.</p>
+  </div>
+</body>
+</html>
